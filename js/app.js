@@ -19,7 +19,8 @@ Enemy.prototype.update = function(dt) {
 	
 	this.x=this.x + 100*dt*this.speed;
 	if(this.x>=ctx.canvas.width){
-		this.x=0;
+		//this.x=0;
+		allEnemies.splice(allEnemies.indexOf(this),1, new Enemy());
 	}
 	
 };
